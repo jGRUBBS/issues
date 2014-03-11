@@ -7,16 +7,17 @@ require "issues/version"
 Gem::Specification.new do |s|
   s.name        = "issues"
   s.version     = Issues::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Issues."
-  s.description = "TODO: Description of Issues."
+  s.authors     = ["Justin Grubbs"]
+  s.email       = ["justin@jgrubbs.net"]
+  s.homepage    = "https://github.com/jGRUBBS/issues"
+  s.summary     = "Web tool for easily logging Github issues while QAing."
+  s.description = "Web tool for easily logging Github issues while QAing."
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
 
-  s.add_dependency "rails", "~> 4.0.0.rc2"
+  s.add_dependency "rails"
+  s.add_dependency "github_api"
 
-  s.add_development_dependency "sqlite3"
+  s.add_development_dependency "mysql2"
 end
